@@ -1,2 +1,2 @@
-# Desenvolvimento-WEB
-Repositório para armazenamento de códigos desenvolvidos em aula, no curso de Análise e Desenvolvimento de Sistemas
+# FRONT CRUD DO LOGIN EM TEMA ESCURO
+Neste repositório, é possível localizar o front-end estilizado do CRUD em tema escuro.
