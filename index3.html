@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Matzzo</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="Logo MATZZO" href="icone.png">
+</head>
+<body>
+    <div class="container" id="loginStage">
+        <img src="logo.png" alt="Logo MATZZO" class="logo">
+        <h1>LOGIN MATZZO</h1>
+        <input type="email" placeholder="E-mail" id="loginEmail" required>
+        <div class="password-container">
+            <input type="password" placeholder="Senha" id="loginPassword" required>
+        </div>
+        <div class="show-password-container">
+            <input type="checkbox" id="showLoginPassword" onclick="toggleLoginPasswordVisibility()">
+            <label for="showLoginPassword">Mostrar Senha</label>
+        </div>        
+        <button id="loginButton" onclick="login()">Entrar</button>
+        <a href="#" onclick="showForgotPasswordStage()" class="forgot-password">Esqueceu a senha?</a>
+    </div>
+
+    <div class="container" id="forgotPasswordStage" style="display: none;">
+        <img src="logo.png" alt="Logo MATZZO" class="logo">
+        <h1>ESQUECEU A SENHA</h1>
+        <p>Escolha uma opção para receber o código de confirmação:</p>
+        <div class="confirmation-method-container">
+            <div>
+                <input type="radio" id="useEmail" name="confirmationMethod" value="email">
+                <label for="useEmail">E-mail</label>
+            </div>
+            <div>
+                <input type="radio" id="usePhone" name="confirmationMethod" value="phone">
+                <label for="usePhone">Telefone</label>
+            </div>
+        </div>
+        <div id="emailInput" style="display: none;">
+            <input type="email" id="forgotEmail" placeholder="Insira seu E-mail">
+        </div>
+        <div id="phoneInput" style="display: none;">
+            <input type="tel" id="forgotPhone" placeholder="Insira seu Telefone">
+        </div>
+        <button onclick="sendConfirmationCode()">Enviar Código</button>
+        <br><br>
+        <a href="#" onclick="showLoginStage()">Voltar para Login</a>
+    </div>
+
+    <div class="container" id="confirmCodeStage" style="display: none;">
+        <img src="logo.png" alt="Logo MATZZO" class="logo">
+        <h1>CONFIRMAÇÃO</h1>
+        <p>Foi encaminhado um código de confirmação para o seu e-mail ou telefone.</p>
+        <input type="text" placeholder="Código de 6 Dígitos" id="confirmationCode">
+        <button onclick="verifyConfirmationCode()">Confirmar</button><br><br>
+        <a href="#" onclick="showForgotPasswordStage()">Voltar</a>
+    </div>
+
+    <div class="container" id="resetPasswordStage" style="display: none;">
+        <img src="logo.png" alt="Logo MATZZO" class="logo">
+        <h1>REDEFINIR SENHA</h1>
+        <p>Por favor, insira sua nova senha:</p>
+        <input type="password" placeholder="Nova Senha" id="newPassword" oninput="validatePassword()">
+        <input type="password" placeholder="Confirme a Nova Senha" id="confirmNewPassword" oninput="validatePassword()">
+        <div class="checkbox-container">
+            <input type="checkbox" id="mostrarSenhaRedefinicao" onclick="togglePasswordVisibility()">
+            <label for="mostrarSenhaRedefinicao">Mostrar Senha</label>            
+        </div>
+        <ul id="passwordRequirements">
+            <li id="length" class="invalid">Pelo menos 12 caracteres</li>
+            <li id="number" class="invalid">Pelo menos 2 números</li>
+            <li id="special" class="invalid">Pelo menos 1 caractere especial</li>
+            <li id="uppercase" class="invalid">Pelo menos 1 letra maiúscula</li>
+            <li id="lowercase" class="invalid">Pelo menos 1 letra minúscula</li>
+        </ul>
+        <button id="resetPasswordButton" onclick="resetPassword()" disabled>Redefinir Senha</button>
+    </div>
+
+    <div class="container" id="loadingStage" style="display: none;">
+        <img src="logo.png" alt="Logo MATZZO" class="logo">
+        <h1>Redirecionando...</h1>
+        <p>Aguarde um momento, você está sendo redirecionado ao seu perfil.</p>
+        <div class="loader"></div>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
