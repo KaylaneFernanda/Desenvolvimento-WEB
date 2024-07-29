@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Matzzo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="Logo MATZZO" href="icone.png">
+</head>
+<body>
+    <div class="container" id="stage0">
+        <img src="logo.png" alt="Logo MATZZO" class="logo">
+        <h1>CADASTRO PROFISSIONAL</h1>
+        <p>Para começar seu cadastro, preencha as seguintes informações:</p>
+        <input type="text" placeholder="Nome Completo" id="usuarioNome" required>
+        <input type="text" placeholder="CPF (sem ponto ou traço)" id="cpfCnpj" required>
+        <input type="date" placeholder="Data de Nascimento" id="dataNasc" required>
+        <input type="email" placeholder="E-mail" id="email" required>
+        <input type="tel" placeholder="Telefone" id="telefone" required>
+        <br><br>
+        <button id="continueStage0" onclick="nextStage(1)">Continuar Cadastro</button>
+        <br><br>
+    </div>
+
+    <div class="container" id="stage1" style="display: none;">
+        <img src="logo.png" alt="Logo MATZZO" class="logo">
+        <h1>CADASTRO MATZZO</h1>
+        <p>Defina sua senha:</p>
+        <input type="password" placeholder="Senha" id="senha" oninput="validatePassword()">
+        <input type="password" placeholder="Confirme sua Senha" id="confirmaSenha" oninput="validatePassword()">
+        <div class="checkbox-container">
+            <input type="checkbox" id="mostrarSenha" onclick="togglePasswordVisibility()">
+            <label for="mostrarSenha">Mostrar Senha</label>
+        </div>
+        <ul id="passwordRequirements">
+            <li id="length" class="invalid">Pelo menos 12 caracteres</li>
+            <li id="number" class="invalid">Pelo menos 2 números</li>
+            <li id="special" class="invalid">Pelo menos 1 caractere especial</li>
+            <li id="uppercase" class="invalid">Pelo menos 1 letra maiúscula</li>
+            <li id="lowercase" class="invalid">Pelo menos 1 letra minúscula</li>
+        </ul>
+        <br>
+        <button id="confirmPasswordButton" onclick="nextStage(2)" disabled>Confirmar Senha</button>
+    </div>
+
+    <div class="container" id="stage2" style="display: none;">
+        <img src="logo.png" alt="Logo MATZZO" class="logo">
+        <h1>Seja Bem-Vindo!</h1>
+        <p>Sua conta na MATZZO foi criada com sucesso, agora só aproveitar e navegar na plataforma :</p>
+        <a href="">Acessar MATZZO</a>
+    </div>
+
+    <script src="script.js"></script>
+
+    <form id="userForm" style="display: none;">
+        <input type="text" id="usuarioNomeInput" name="usuarioNome">
+        <input type="text" id="cpfCnpjInput" name="cpfCnpj">
+        <input type="date" id="dataNascInput" name="dataNasc">
+        <input type="email" id="emailInput" name="email">
+        <input type="tel" id="telefoneInput" name="telefone">
+        <input type="password" id="senhaInput" name="senha">
+    </form>
+</body>
+</html>
