@@ -1,2 +1,2 @@
-# Desenvolvimento-WEB
-Repositório para armazenamento de códigos desenvolvidos em aula, no curso de Análise e Desenvolvimento de Sistemas
+# HTML
+Nestes arquivos estão armazenados de forma nomeada os arquivos em linguagem HTML. na qual se relacionam com os demais arquivos em CSS e JS.
