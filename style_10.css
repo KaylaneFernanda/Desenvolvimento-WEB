@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d4f4f4;
+}
+
+#registro {
+    width: 30%;
+    background-color: #c2e8e8;
+    padding: 20px;
+    border-radius: 5px;
+    border: 5px solid #93cccc;
+    box-shadow: 6px 6px 0px 0px #8e8e8e;
+}
+
+#registro h1 {
+    text-align: center;
+}
+
+#registro input {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 80%;
+}
+
+#registro .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 5px;
+}
+
+button.cadastrar-btn,
+button.listar-btn {
+    background-color: #008080;
+    color: white;
+}
+
+.reset-btn {
+    background-color: #4d4d4d;
+    color: white;
+}
+
+#message {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.highlight {
+    color: #006666;
+    font-weight: bold;
+}
+
+.warning {
+    color: #1b4a4a;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1.5px solid #2f466a;
+    padding: 5px;
+}
+
+th {
+    text-align: center;
+    background-color: rgba(1, 7, 26, 0.105);
+}
+
+td {
+    text-align: left;
+}
