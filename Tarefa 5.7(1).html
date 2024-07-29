@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="JS Tarefa 5.7.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS Tarefa 5.7.css">
+
+    <title>Check Box</title>
+</head>
+
+<body>
+
+    <div class="center-container">
+        <h1>Escolha seus hobbies:</h1>
+
+        <fieldset class="checkbox-container">
+            <legend>Selecione seus hobbies</legend>
+            <div class="left-align">
+                <input type="checkbox" id="ler" name="hobby" value="Ler">
+                <label for="ler"> Ler</label><br>
+
+                <input type="checkbox" id="escrever" name="hobby" value="Escrever">
+                <label for="escrever"> Escrever</label><br>
+
+                <input type="checkbox" id="programar" name="hobby" value="Programar">
+                <label for="programar"> Programar</label><br>
+
+                <input type="checkbox" id="fotografar" name="hobby" value="Fotografar">
+                <label for="fotografar"> Fotografar</label><br>
+            </div>
+        </fieldset>
+
+        <button class="blue-button" onclick="mostrarHobbiesSelecionados()">Mostrar Hobbies Selecionados</button>
+
+        <!-- Botão para limpar as opções -->
+        <button class="green-button" onclick="limparOpcoes()">Limpar opções</button>
+
+        <div id="resultado"></div>
+    </div>
+
+</body>
+
+</html>

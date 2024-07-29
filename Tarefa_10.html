@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_10.css">
+    <title>Cadastramento de Contatos</title>
+</head>
+
+<body>
+    <div id="registro">
+        <h1>Cadastramento de Contatos</h1>
+        <input type="number" id="codigoPessoa" placeholder="Código da Pessoa:">
+        <input type="text" id="nomePessoa" placeholder="Nome da Pessoa:">
+        <input type="text" id="fonePessoa" placeholder="Telefone da Pessoa:">
+        <div class="buttons-container">
+            <button onclick="adicionarPessoa()" class="cadastrar-btn">Cadastrar</button>
+            <button onclick="listarPessoas()" class="listar-btn">Listar</button>
+            <button onclick="resetar()" class="reset-btn">Reset</button>
+        </div>
+        <div id="message"></div>
+        <div id="lista"></div>
+    </div>
+    <script src="script_10.js"></script>
+</body>
+
+</html>

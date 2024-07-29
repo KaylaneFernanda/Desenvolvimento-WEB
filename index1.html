@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Cadastramento de Produtos</title>
+</head>
+
+<body>
+    <div id="registro">
+        <h1>Cadastramento de Produtos</h1>
+        <input type="number" id="codigoProduto" placeholder="Código do Produto:">
+        <input type="text" id="descricaoProduto" placeholder="Descrição do Produto:">
+        <input type="text" id="fabricanteProduto" placeholder="Fabricante do Produto:">
+        <input type="text" id="quantidadeEstoque" placeholder="Quantidade em Estoque:">
+        <div class="buttons-container">
+            <button onclick="adicionarProduto()" class="cadastrar-btn">Cadastrar</button>
+            <button onclick="listarProdutos()" class="listar-btn">Listar</button>
+            <button onclick="limparProduto()" class="listar-btn">Limpar</button>
+            <button onclick="resetar()" class="reset-btn">Reset</button>
+        </div>
+        <div id="message"></div>
+        <div id="lista"></div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+
+</html>

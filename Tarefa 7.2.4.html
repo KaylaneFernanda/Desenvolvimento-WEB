@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 7.2.4.html</title>
+</head>
+<body>
+    <script>
+
+        let A = prompt("Entre com o valor numérico do salário atual de um empregado: ");
+        let B = prompt("Entre com o valor da porcentagem de aumento: ");
+
+        console.log("Entrado o valor numérico do salário atual de um empregado: " + A);
+        console.log("Entrado o valor da porcentagem de aumento: " + B);
+
+        A = parseFloat(A);
+        B = parseFloat(B);
+
+        alert("Salário atual: " + A);
+        console.log("Salário atual: " + A);
+
+        alert("Porcentagem correspondente ao aumento do salário: " + B + "%");
+        console.log("Porcentagem correspondente ao aumento do salário: " + B + "%");
+
+        let aumento = A + A * B / 100;
+        alert("Salário futuro: " + aumento);
+        console.log("Salário futuro: " + aumento);
+
+    </script>
+</body>
+</html>
