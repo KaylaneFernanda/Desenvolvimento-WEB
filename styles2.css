@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+#stage1, #stage2, #stage3, #stage4, #stage5 {
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Itim', cursive;
+    background-color: #f0f0f0; /* Cor de fundo mais clara */
+    color: #333; /* Cor do texto principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; /* Fundo do contêiner branco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+}
+
+.logo {
+    width: 190px; /* Aumentar o tamanho da logo */
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D6D7D9;
+    color: #333;
+    font-size: 14px;
+}
+
+.checkbox-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #352C62; /* Cor de fundo do botão azul */
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #AC199B; /* Cor de fundo do botão azul escuro no hover */
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: #352C62; /* Cor de fundo do botão azul */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: #188898; /* Cor de fundo do botão azul escuro no hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.confirmation-method-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.confirmation-method-container div {
+    flex-basis: 48%; /* Ou qualquer largura que desejar */
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #188898;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.invalid {
+    color: #FE5A72;
+}
+
+.valid {
+    color: #188898;
+}
