@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+#stage1, #stage2, #stage3, #stage4, #stage5 {
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Itim', cursive;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    width: 190px; /* Aumentar o tamanho da logo */
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D6D7D9;
+    color: #323232;
+    font-size: 14px;
+}
+
+.checkbox-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.password-container,
+.show-password-container,
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+
+.password-container input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.password-container label,
+.show-password-container label,
+.checkbox-container label {
+    font-size: 15px;
+    color: #747474;
+    display: flex;
+    align-items: center;
+}
+
+.password-container label input[type="checkbox"]:not(:checked),
+.show-password-container label input[type="checkbox"]:not(:checked),
+.checkbox-container label input[type="checkbox"]:not(:checked) {
+    margin-right: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #352C62;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #AC199B;
+}
+
+a.forgot-password {
+    color: #188898;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.confirmation-method-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.confirmation-method-container div {
+    flex-basis: 48%; /* Ou qualquer largura */
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #188898;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#passwordRequirements {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#passwordRequirements li {
+    margin: 15px 0;
+}
+
+.valid {
+    color: #188898;
+}
+
+.invalid {
+    color: #FE5A72;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+    color: #D6D7D9;
+}
